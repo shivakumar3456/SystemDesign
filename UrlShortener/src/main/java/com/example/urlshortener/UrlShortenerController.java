@@ -16,7 +16,7 @@ public class UrlShortenerController {
     @Autowired
     private @NotNull IUrlShortener shortener;
 
-    @GetMapping("urlshorten")
+    @GetMapping("shorturl")
     @NotNull
     public String convertToShortURL(@RequestParam("longUrl") @NotNull String longUrl){
         return shortener.convert(longUrl);

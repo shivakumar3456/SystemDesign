@@ -1,4 +1,4 @@
-package com.example.urlshortener;
+package com.example.keygenerationservice.Service;
 
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
