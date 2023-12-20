@@ -16,12 +16,12 @@ public class KeyGenerationService {
     @NotNull
     private ZooKeeper zooKeeper;
 
-    @Value("${TokenUrlShortener.counterPath}")
+    @Value("${counterPath}")
     @NotNull
     private String counterPath;
 
 
-    @Value("${TokenUrlShortener.counterRange}")
+    @Value("${counterRange}")
     private int counterRange;
 
     @NotNull

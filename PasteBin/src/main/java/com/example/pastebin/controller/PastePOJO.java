@@ -1,12 +1,14 @@
 package com.example.pastebin.controller;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class PastePOJO {
     private @NotNull String content = "";
     private @NotNull String title = "";
     private int permission;
     private int userId;
+    private @Nullable String pasteURL;
 
     @NotNull
     public String getContent() {
@@ -40,5 +42,19 @@ public class PastePOJO {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public void setPasteURL(@NotNull String pasteURL) {
+        this.pasteURL = pasteURL;
+    }
+
+    @Nullable
+    public String getPasteURL() {
+        return pasteURL;
+    }
+
+    @Override
+    public @NotNull String toString() {
+        return "Paste URL : " + pasteURL + " \n content : " + content + " title : " + title;
     }
 }
