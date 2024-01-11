@@ -16,12 +16,5 @@ public class MotorCycleParkingSpot extends ParkingSpot{
         return VehicleType.MOTORCYCLE == vehicle.getVehicleType() && vehicle.isElectric() == isElectric();
     }
 
-    @Override
-    public int getHourlyCharges() {
-        if (isElectric()){
-            return 2;
-        }else {
-            return 1;
-        }
-    }
+
 }

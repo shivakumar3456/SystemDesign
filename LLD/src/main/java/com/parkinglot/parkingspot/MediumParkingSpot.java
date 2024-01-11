@@ -16,12 +16,4 @@ public class MediumParkingSpot extends ParkingSpot {
         return VehicleType.MEDIUM == vehicle.getVehicleType() && vehicle.isElectric() && isElectric();
     }
 
-    @Override
-    public int getHourlyCharges() {
-        if (isElectric()){
-            return 6;
-        }else {
-            return 3;
-        }
-    }
 }

@@ -59,6 +59,4 @@ public abstract class ParkingSpot {
     }
 
     public abstract boolean checkVehicleEligibility(Vehicle vehicle);
-
-    public abstract int getHourlyCharges();
 }

@@ -29,7 +29,7 @@ public class Ticket {
     public float getPrice(){
         long endTime = System.currentTimeMillis();
         float hours = (float) (endTime-startTime)/(1000*60*60);
-        return spot.getHourlyCharges() * hours;
+        return spot.getParkingSpotType().getHourlyCharges(spot.isElectric()) * hours;
     }
 
     public String getSerialNo() {

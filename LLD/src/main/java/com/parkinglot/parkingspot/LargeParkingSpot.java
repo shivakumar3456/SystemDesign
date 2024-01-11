@@ -15,13 +15,4 @@ public class LargeParkingSpot extends ParkingSpot{
     public boolean checkVehicleEligibility(Vehicle vehicle) {
         return VehicleType.LARGE == vehicle.getVehicleType() && vehicle.isElectric() == isElectric() ;
     }
-
-    @Override
-    public int getHourlyCharges() {
-        if (isElectric()){
-            return 9;
-        }else {
-            return 4;
-        }
-    }
 }
