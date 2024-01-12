@@ -28,11 +28,7 @@ public class ParkingLotExecutor {
         Ticket ticket2 = instance.assignParkingSpotAndCreateTicket(vehicle3);
         Ticket ticket3 = instance.assignParkingSpotAndCreateTicket(vehicle4);
 
-        printTicket(ticket, instance);
-        printTicket(ticket1, instance);
-        printTicket(ticket2, instance);
-        printTicket(ticket3, instance);
-
+        instance.removeVehicleAndGetPrice(ticket);
     }
 
     private static void printTicket(Ticket ticket, ParkingLot instance) {

@@ -37,19 +37,22 @@ public class ParkingLot {
         for (ParkingFloor floor : floorList) {
             ParkingSpot parkingSpot = floor.assignVehicleToParkingSpot(vehicle);
             if (parkingSpot != null){
-                return TicketBuilder.getInstance()
+                Ticket ticket = TicketBuilder.getInstance()
                         .setTicketNo(getNextTicketNumber())
                         .setParkingSpot(parkingSpot)
                         .setVehicle(vehicle)
                         .build();
+                System.out.println("Parking spot found for vehicle " + vehicle.getVehicleNo() + " and assigned ticket :" + ticket.getSerialNo());
+                return ticket;
             }
         }
-        System.out.println("Parking lot is full");
+        System.out.println("Parking lot is full, cannot find parking spot for vehicle " + vehicle.getVehicleNo());
         return null;
     }
 
     public float removeVehicleAndGetPrice(Ticket ticket){
         ticket.getParkingSpot().remove();
+        System.out.println("Ticket " + ticket.getSerialNo() +" Vehicle"+ticket.getVehicle().getVehicleNo() + " Price to pay" +ticket.getPrice());
         return ticket.getPrice();
     }
 
